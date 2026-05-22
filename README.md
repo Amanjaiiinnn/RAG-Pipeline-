@@ -21,13 +21,15 @@ This repository contains a complete, end-to-end RAG pipeline designed to ingest 
 
 
 
-🔧 Configuration
+##🔧 Configuration
+
 To run this pipeline, you will need a Groq API Key:
 
-API_KEY_GROQ = "your_groq_api_key_here"
-📖 How it Works
-Data Ingestion: Documents are loaded and split into chunks with overlap to ensure no context is lost.
-Embedding: Each chunk is converted into a 384-dimensional vector using the all-MiniLM-L6-v2 model.
-Storage: Vectors and metadata are stored in a persistent ChromaDB collection for long-term retrieval.
-Querying: User queries are embedded and compared against the store using cosine similarity to find relevant matches.
-Generation: The top-K retrieved chunks are formatted into a prompt and sent to the LLM (Qwen-32B) to generate an answer grounded in the provided documents.
+`API_KEY_GROQ = "your_groq_api_key_here"`
+##📖 How it Works
+
+- **Data Ingestion**: Documents are loaded and split into chunks with overlap to ensure no context is lost.
+- **Embedding**: Each chunk is converted into a 384-dimensional vector using the all-MiniLM-L6-v2 model.
+- **Storage**: Vectors and metadata are stored in a persistent ChromaDB collection for long-term retrieval.
+- **Querying**: User queries are embedded and compared against the store using cosine similarity to find relevant matches.
+- **Generation**: The top-K retrieved chunks are formatted into a prompt and sent to the LLM (Qwen-32B) to generate an answer grounded in the provided documents.
