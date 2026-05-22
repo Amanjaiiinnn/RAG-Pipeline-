@@ -1,26 +1,48 @@
 # PDF Retrieval-Augmented Generation (RAG) Pipeline
 
-This repository contains a complete, end-to-end RAG pipeline designed to ingest PDF documents, process them into semantic chunks, and provide context-aware answers using state-of-the-art LLMs via Groq.
+This repository contains a complete end-to-end RAG pipeline designed to ingest PDF documents, process them into semantic chunks, and generate context-aware answers using state-of-the-art LLMs through Groq.
+
+---
 
 ## 🚀 Features
 
-- **PDF Ingestion**: Bulk loading of PDF files from local directories using `PymUPDFLoader`.
-- **Smart Chunking**: Utilizes `RecursiveCharacterTextSplitter` to maintain context while staying within token limits.
-- **Vector Storage**: Persistent storage of document embeddings using `ChromaDB` for efficient semantic search.
-- **Semantic Retrieval**: A custom `RAGretriever` class that calculates similarity scores to find the most relevant context.
-- **Groq Integration**: Fast inference using models like `Qwen3-32B` hosted on Groq for high-quality generation.
+- **PDF Ingestion**  
+  Bulk loading of PDF files from local directories using `PyMuPDFLoader`.
+
+- **Smart Chunking**  
+  Uses `RecursiveCharacterTextSplitter` to preserve semantic context while staying within token limits.
+
+- **Vector Storage**  
+  Persistent embedding storage using `ChromaDB` for efficient semantic retrieval.
+
+- **Semantic Retrieval**  
+  Custom `RAGRetriever` class for similarity-based document retrieval with ranking and scoring.
+
+- **Groq Integration**  
+  Fast LLM inference using models such as `Qwen/Qwen3-32B` hosted on Groq.
+
+---
 
 ## 🛠️ Tech Stack
 
-- **Orchestration**: LangChain
-- **LLM API**: Groq (Qwen-32B Model)
-- **Vector DB**: ChromaDB
-- **Embeddings**: Sentence-Transformers (`all-MiniLM-L6-v2`)
-- **PDF Processing**: PyMuPDF
+| Component | Technology |
+|---|---|
+| Orchestration | LangChain |
+| LLM API | Groq |
+| LLM Model | Qwen3-32B |
+| Vector Database | ChromaDB |
+| Embedding Model | Sentence-Transformers (`all-MiniLM-L6-v2`) |
+| PDF Processing | PyMuPDF |
 
-##🔧 Configuration
-To run this pipeline, you will need a Groq API Key:
-`API_KEY_GROQ = "your_groq_api_key_here"`
+---
+
+## 🔧 Configuration
+
+To run this pipeline, add your Groq API key:
+
+```python
+API_KEY_GROQ = "your_groq_api_key_here" ```
+
 
 ##📖 How it Works
 
