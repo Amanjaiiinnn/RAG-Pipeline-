@@ -18,14 +18,10 @@ This repository contains a complete, end-to-end RAG pipeline designed to ingest 
 - **Embeddings**: Sentence-Transformers (`all-MiniLM-L6-v2`)
 - **PDF Processing**: PyMuPDF
 
-
-
-
 ##🔧 Configuration
-
 To run this pipeline, you will need a Groq API Key:
-
 `API_KEY_GROQ = "your_groq_api_key_here"`
+
 ##📖 How it Works
 
 - **Data Ingestion**: Documents are loaded and split into chunks with overlap to ensure no context is lost.
