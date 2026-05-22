@@ -36,13 +36,6 @@ This repository contains a complete end-to-end RAG pipeline designed to ingest P
 
 ---
 
-## 🔧 Configuration
-
-To run this pipeline, add your Groq API key:
-
-```python
-API_KEY_GROQ = "your_groq_api_key_here" ```
-
 
 ##📖 How it Works
 
@@ -51,3 +44,15 @@ API_KEY_GROQ = "your_groq_api_key_here" ```
 - **Storage**: Vectors and metadata are stored in a persistent ChromaDB collection for long-term retrieval.
 - **Querying**: User queries are embedded and compared against the store using cosine similarity to find relevant matches.
 - **Generation**: The top-K retrieved chunks are formatted into a prompt and sent to the LLM (Qwen-32B) to generate an answer grounded in the provided documents.
+
+  ---
+
+## 🔧 Configuration
+
+To run this pipeline, add your Groq API key:
+
+```python
+API_KEY_GROQ = "your_groq_api_key_here" ```
+
+
+
