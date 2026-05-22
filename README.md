@@ -36,8 +36,7 @@ This repository contains a complete end-to-end RAG pipeline designed to ingest P
 
 ---
 
-
-##📖 How it Works
+📖 How it Works
 
 - **Data Ingestion**: Documents are loaded and split into chunks with overlap to ensure no context is lost.
 - **Embedding**: Each chunk is converted into a 384-dimensional vector using the all-MiniLM-L6-v2 model.
